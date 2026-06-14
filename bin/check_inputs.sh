@@ -1,8 +1,7 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]]; then
-    echo "Blad: Niepoprawna liczba argumentow." >&2
-    echo "Uzycie: $0 <co najmniej jeden argument>" >&2
+    echo "Usage: $0 <at least one argument>" >&2
     exit 1
 fi
 
