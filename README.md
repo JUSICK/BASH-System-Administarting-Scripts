@@ -36,11 +36,12 @@ bash bin/validate_lines.sh
 <img width="1941" height="144" alt="Screenshot 2026-06-14 162139" src="https://github.com/user-attachments/assets/c0d1376b-c80b-4f53-b146-1524ac24e99e" />
 
 ### Installation & Execution
-1. Clone the repository:
+Clone the repository:
    ```bash
    git clone https://github.com/JUSICK/BASH-System-Administarting-Scripts.git
    cd BASH-System-Administarting-Scripts
    ```
+### Scripts
 | # | Script Name | Core Functionality | Primary Commands/Utilities Used |
 |---|---|---|---|
 | 1 | `script_name_1.sh` | [e.g., Automates user account creation and group assignment] | `useradd`, `chown`, `awk` |
