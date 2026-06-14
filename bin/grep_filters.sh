@@ -8,10 +8,6 @@ fi
 dir=$1
 i=0
 
-while IFS= read -r line; do
-    if echo "$line" | grep -q "ERROR"; then
-        (( i++ ))
-    fi
-done < "$dir"
+i=$(grep -c "ERROR" "$dir")
 
 echo "Number of ERROR messages found: $i"
