@@ -3,7 +3,7 @@
 CONFIG_FILE="config/job.env"
 
 if [ ! -f "$CONFIG_FILE" ]; then
-    echo "Blad: Brak pliku konfiguracyjnego $CONFIG_FILE" >&2
+    echo "ERROR: Error finding config $CONFIG_FILE" >&2
     exit 1
 fi
 source "$CONFIG_FILE"
@@ -21,7 +21,7 @@ command -v mktemp &>/dev/null && validation[mktemp]="OK" || validation[mktemp]="
 failed=0
 for key in "${!validation[@]}"; do
     if [ "${validation[$key]}" == "FAIL" ]; then
-        echo "Blad walidacji srodowiska: $key ma status FAIL" >&2
+        echo "Error: $key FAILED" >&2
         failed=$((failed + 1))
     fi
 done
@@ -36,19 +36,19 @@ mkdir -p "$(dirname "$LOG_FILE")"
 
 TMP_DIR=$(mktemp -d)
 if [ ! -d "$TMP_DIR" ]; then
-    echo "Blad: Krytyczna awaria mktemp." >&2
+    echo "ERROR: mktemp issue." >&2
     exit 3
 fi
 
 cleanup() {
     rm -rf "$TMP_DIR"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - Czyszczenie wykonane." >> "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Cleanup done." >> "$LOG_FILE"
 }
 trap cleanup EXIT
 
 TMP_REPORT="$TMP_DIR/report.tmp"
 
-echo "$(date '+%Y-%m-%d %H:%M:%S') - Start generowania raportu." > "$LOG_FILE"
+echo "$(date '+%Y-%m-%d %H:%M:%S') - Generating report..." > "$LOG_FILE"
 
 
 printf "path\tsize_bytes\n" > "$TMP_REPORT"
@@ -58,9 +58,9 @@ find "$INPUT_DIR" -maxdepth 1 -type f -printf "%p\t%s\n" >> "$TMP_REPORT" 2>> "$
 
 FINAL_TARGET="${REPORT_DIR%/}/$OUTPUT_FILE"
 if mv "$TMP_REPORT" "$FINAL_TARGET"; then
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - Sukces: Przeniesienie raportu wykonane." >> "$LOG_FILE"
-    echo "Operacja zakończona sukcesem. Raport: $FINAL_TARGET"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Success: Report transfer succeeded." >> "$LOG_FILE"
+    echo "Sucess. Report: $FINAL_TARGET"
 else
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - Bladd podczas operacji atomowej mv." >> "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - ERROR while saving." >> "$LOG_FILE"
     exit 4
 fi
