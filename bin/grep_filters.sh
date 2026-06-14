@@ -5,9 +5,9 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
-dir=$1
+file=$1
 i=0
 
-i=$(grep -c "ERROR" "$dir")
+i=$(grep -c "ERROR" "$file")
 
 echo "Number of ERROR messages found: $i"
