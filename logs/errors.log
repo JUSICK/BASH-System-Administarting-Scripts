@@ -1,0 +1,5 @@
+2026-05-27 09:01:00 INFO start
+2026-05-27 09:05:00 ERROR database timeout
+2026-05-27 09:20:00 ERROR invalid input
+2026-05-27 10:01:00 WARN slow request
+2026-05-27 10:15:00 ERROR service unavailable

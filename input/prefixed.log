@@ -1,0 +1,5 @@
+cat > input/prefixed.log <<'EOF'
+[APP] 2026-03-01 08:00:00 INFO user=anna msg=Start aplikacji
+[APP] 2026-03-01 08:00:01 WARN user=anna msg=Brak pliku konfiguracyjnego
+[APP] 2026-03-01 08:00:02 ERROR user=jan msg=Nie udalo sie otworzyc pliku
+EOF

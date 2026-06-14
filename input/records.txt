@@ -1,0 +1,7 @@
+cat > input/records.txt <<'EOF'
+ID=123;USER=jan1;ROLE=ADMIN
+ID=77;USER=anna;ROLE=USER
+ID=AB;USER=ola;ROLE=ADMIN
+ID=17;USER=jan_k;ROLE=USER
+ID=5;USER=adam;ROLE=ROOT
+EOF

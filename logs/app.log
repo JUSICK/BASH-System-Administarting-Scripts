@@ -1,0 +1,5 @@
+2026-05-27 09:00:01 [INFO] ip=192.168.1.10 application started
+2026-05-27 09:01:12 [WARN] ip=192.168.1.11 slow response
+2026-05-27 09:02:44 [ERROR] ip=192.168.1.10 database unavailable
+2026-05-27 09:03:10 [INFO] ip=10.0.0.5 user logged in
+2026-05-27 09:04:22 [ERROR] ip=192.168.1.12 timeout

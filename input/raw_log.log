@@ -1,0 +1,3 @@
+printf '2026-03-01\t08:10:00\tWARN\tuser=anna\tmsg=Start aplikacji \n2026-03-01 08:10:01
+INFO user=jan msg=OK\t \n2026-03-01 08:10:02 WARN user=ola msg=Blad formatu \n' >
+input/raw_log.log

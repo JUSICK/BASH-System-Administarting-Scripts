@@ -1,0 +1,5 @@
+2026-05-27 INFO user=anna ip=192.168.1.10 action=login_success
+2026-05-27 WARN user=jan ip=192.168.1.11 action=login_failed
+2026-05-27 ERROR user=root ip=10.0.0.5 action=path_traversal
+2026-05-27 INFO user=ewa ip=192.168.1.12 action=forbidden
+2026-05-27 ERROR user=adam ip=192.168.1.13 action=logout

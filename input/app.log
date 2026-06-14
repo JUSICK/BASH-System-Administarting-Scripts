@@ -1,0 +1,11 @@
+cat > input/app.log <<'EOF'
+2026-03-01 08:00:00 INFO user=anna msg=Start aplikacji
+2026-03-01 08:00:01 WARN user=anna msg=Brak pliku konfiguracyjnego HTTP=404
+2026-03-01 08:00:02 ERROR user=jan msg=Nie udalo sie otworzyc pliku HTTP=503
+2026-03-01 08:00:03 INFO user=jan msg=Ponowiono probe
+2026-03-01 08:00:04 error user=ola msg=Test male litery
+2026-03-01 08:00:05 WARN user=jan msg=HTTP=404 timeout
+2026-03-01 08:00:06 ERROR user=anna msg=HTTP=500
+2026-03-01 08:00:07 INFO user=jan msg=Koniec pracy
+2026-03-01 08:00:08 ERROR msg=Brak usera HTTP=401
+EOF

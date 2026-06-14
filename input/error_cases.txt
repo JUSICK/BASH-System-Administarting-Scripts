@@ -1,0 +1,9 @@
+cat > input/error_cases.txt <<'EOF'
+ERROR
+ERRORtimeout
+WARNERRORWARN
+ERRORSdetected
+SUPERERRORcase
+ERROR_1
+INFO no problem
+EOF
