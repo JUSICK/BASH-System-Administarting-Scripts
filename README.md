@@ -35,5 +35,20 @@ bash bin/validate_lines.sh
 ```
 <img width="1941" height="144" alt="Screenshot 2026-06-14 162139" src="https://github.com/user-attachments/assets/c0d1376b-c80b-4f53-b146-1524ac24e99e" />
 
+### Installation & Execution
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JUSICK/BASH-System-Administarting-Scripts.git
+   cd BASH-System-Administarting-Scripts
+   ```
+| # | Script Name | Core Functionality | Primary Commands/Utilities Used |
+|---|---|---|---|
+| 1 | `script_name_1.sh` | [e.g., Automates user account creation and group assignment] | `useradd`, `chown`, `awk` |
+| 2 | `script_name_2.sh` | [e.g., Monitors disk utilization and alerts via logs] | `df`, `grep`, `logger` |
+| 3 | `script_name_3.sh` | [e.g., Parses system authentication logs for anomalies] | `sed`, `sort`, `uniq` |
+| 4 | `script_name_4.sh` | [e.g., Automates incremental backups of specified directories] | `tar`, `rsync`, `find` |
+| 5 | `script_name_5.sh` | [e.g., Manages and audits system service states] | `systemctl`, `stat` |
+
+
 
 
