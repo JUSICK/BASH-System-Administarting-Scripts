@@ -1,6 +1,11 @@
 #!/bin/bash
 
-CONFIG_FILE="config/job.env"
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <config>" >&2
+    exit 1
+fi
+
+CONFIG_FILE="$1"
 
 if [ ! -f "$CONFIG_FILE" ]; then
     echo "ERROR: Error finding config $CONFIG_FILE" >&2
