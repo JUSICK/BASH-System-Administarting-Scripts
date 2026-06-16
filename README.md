@@ -53,12 +53,12 @@ Clone the repository:
 ### Scripts
 | # | Script Name | Core Functionality | Primary Commands/Utilities Used |
 |---|---|---|---|
-| 1 | `check_input.sh` | [e.g., Automates user account creation and group assignment] | `useradd`, `chown`, `awk` |
-| 2 | `create_task.sh` | [e.g., Automates user account creation and group assignment] | `useradd`, `chown`, `awk` |
-| 3 | `grep_filters.sh` | [e.g., Monitors disk utilization and alerts via logs] | `df`, `grep`, `logger` |
-| 4 | `job_runner.sh` | [e.g., Parses system authentication logs for anomalies] | `sed`, `sort`, `uniq` |
-| 5 | `security_log_filter.sh` | [e.g., Automates incremental backups of specified directories] | `tar`, `rsync`, `find` |
-| 6 | `validate_lines.sh` | [e.g., Manages and audits system service states] | `systemctl`, `stat` |
+| 1 | `check_input.sh` | [Detects system file's attribute, wether dic or readable or missing] | |
+| 2 | `create_task.sh` | [Automates creating project tickets] | `date`|
+| 3 | `grep_filters.sh` | [e.g., Monitors disk utilization and alerts via logs] | `grep` |
+| 4 | `job_runner.sh` | [Counts directory bytes] | `find`, `mktemp`, `date`, `dirname` |
+| 5 | `security_log_filter.sh` | [Flags known security violation logs] | `grep`, `wc` |
+| 6 | `validate_lines.sh` | [Validates users' IDs and Names] | |
 
 
 
